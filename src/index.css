@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Brand and accent (Serene Lagoon) */
+    --primary: #1F7A78;
+    --primary-hover: #176361;
+    --primary-pressed: #11504E;
+    --primary-soft: #E1F2F0;
+    --accent: #6C6FD8;
+    --accent-soft: #ECECFB;
+
+    /* Surfaces and lines */
+    --bg: #F4F9F8;
+    --surface: #FFFFFF;
+    --surface-muted: #EAF3F2;
+    --border: #D5E5E3;
+
+    /* Shadows: very soft, teal-tinted */
+    --shadow-serene: 0 4px 16px rgba(31, 122, 120, 0.08);
+    --shadow-serene-sm: 0 1px 3px rgba(31, 122, 120, 0.06);
+    --shadow-serene-lg: 0 10px 25px -5px rgba(31, 122, 120, 0.12);
+
+    /* Text */
+    --text: #16302F;
+    --text-secondary: #4A6663;
+    --text-muted: #55706E;
+    --text-on-primary: #FFFFFF;
+
+    /* Status colors (paired with icon and label) */
+    --status-booked-text: #1F7A78;
+    --status-booked-bg: #E1F2F0;
+    --status-completed-text: #2F6FB0;
+    --status-completed-bg: #E4EEF9;
+    --status-cancelled-text: #B4455A;
+    --status-cancelled-bg: #FBE9EC;
+    --status-noshow-text: #9A5B00;
+    --status-noshow-bg: #FFF1D6;
+    --status-held-text: #5B5FC7;
+    --status-held-bg: #ECECFB;
+    --status-flagged-text: #B45309;
+    --status-flagged-bg: #FFEBD6;
+    --status-error-text: #B3261E;
+    --status-error-bg: #FDECEA;
+    --status-info-text: #4A6663;
+    --status-info-bg: #EAF3F2;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #F4F9F8;
+    color: #16302F;
+    min-height: 100vh;
+  }
+
+  /* Interaction focus ring: 2px accent with 2px offset on interactive elements */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px #FFFFFF, 0 0 0 4px #6C6FD8 !important;
+  }
+}
+
+/* Custom scrollbars matching Serene Lagoon */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F4F9F8;
+}
+::-webkit-scrollbar-thumb {
+  background: #D5E5E3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #B5CCC9;
+}
+
+@media print {
+  body {
+    background-color: #ffffff !important;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+}

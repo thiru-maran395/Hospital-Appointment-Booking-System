@@ -1,0 +1,6 @@
+{
+  "name": "Hospital Appointment Booking System",
+  "description": "Find doctors, check real-time availability slots, book appointments without double bookings, and manage hospital visits online.",
+  "permissions": [],
+  "capabilities": []
+}
